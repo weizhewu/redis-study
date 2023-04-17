@@ -40,6 +40,7 @@ public enum ResultCode {
     USER_NOT_LOGGED_IN(20012, "用户未登录"),
     USER_ACCOUNT_NOT_EXIST(20013,"账号信息不存在"),
     USER_ACCOUNT_LOCKED(20014,"账号已被锁定"),
+    USER_AUTHENTICATE_FAIL(20015,"用户无资格"),
 
 
     /* 业务错误：30001-39999 */
@@ -66,7 +67,10 @@ public enum ResultCode {
     INTERFACE_EXCEED_LOAD(60006, "接口负载过高"),
     INTERFACE_FALLBACK(60007, "接口被降级"),
 
-    MANAGER_INSERT_FAILURE(70001,"管理员新增失败"),
+    LOTTERY_ACTIVITY_NOT_START_OR_END(70001,"活动未开始或已结束"),
+    LOTTERY_ACTIVITY_BUSY(70002,"活动繁忙"),
+    LOTTERY_FAIL(70003,"抽奖失败"),
+    LOTTERY_NOT_SUCCESS(70004,"未中奖"),
 
 
     /* 权限错误：70001-79999 */

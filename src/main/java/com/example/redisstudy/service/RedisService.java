@@ -316,4 +316,25 @@ public class RedisService {
             return false;
         }
     }
+
+    /**
+     *
+     * 给key对应缓存设置过期时间
+     * @param key key
+     * @param time 过期时间，单位：秒
+     * @param timeUnit TimeUnit
+     * @return ture；新增成功 false：新增失败
+     */
+    public boolean expire(String key, long time,TimeUnit timeUnit) {
+        try {
+            if (time > 0L) {
+                this.redisTemplate.expire(key, time,timeUnit);
+            }
+
+            return true;
+        } catch (Exception var5) {
+            var5.printStackTrace();
+            return false;
+        }
+    }
 }
